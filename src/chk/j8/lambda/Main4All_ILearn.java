@@ -2,11 +2,33 @@ package chk.j8.lambda;
 
 import chk.j8.lambda.lambda_exp.*;
 
+import static chk.j8.lambda.util.CommonUtil.getCharInput;
+
 public class Main4All_ILearn {
 
     public static void main(String[] args) {
 
-        lambdaExpression_ILearn();
+
+        while (true) {
+            System.out.println("a -> Lambda Expression...");
+            System.out.println("e -> Exit...");
+            char ch = getCharInput();
+
+            switch (ch) {
+                case 'a':
+                case 'A': {
+                    lambdaExpression_ILearn();
+                    break;
+                }
+                case 'e':
+                case 'E': {
+                    System.exit(0);
+                }
+                default: {
+                    System.out.println("Invalid Input...");
+                }
+            }
+        }
     }
 
     /***
