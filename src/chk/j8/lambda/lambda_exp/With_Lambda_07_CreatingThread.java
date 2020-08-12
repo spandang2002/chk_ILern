@@ -10,13 +10,19 @@ public class With_Lambda_07_CreatingThread {
 
     private void threadCodeWithLambda() {
 
-        Runnable runnable1 = () -> System.out.println("threadCodeWithLambda1:running");
+        Runnable runnable1 = () -> System.out.println("threadCodeWithLambda1:running...");
         runnable1.run();
 
+
         Runnable runnable2 = () -> {
-            System.out.println("threadCodeWithLambda2:running");
+            System.out.println("threadCodeWithLambda2:running...");
         };
         runnable2.run();
+
+
+        new Thread(() -> {
+            System.out.println("threadCodeWithLambda3:running...");
+        }).start();
     }
 
     private void threadCodeWithoutLambda() {
@@ -36,5 +42,13 @@ public class With_Lambda_07_CreatingThread {
             }
         };
         runnable2.run();
+
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("threadCodeWithoutLambda3:running...");
+            }
+        }).start();
     }
 }
