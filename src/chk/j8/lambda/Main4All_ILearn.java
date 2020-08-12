@@ -43,5 +43,6 @@ public class Main4All_ILearn {
         new With_Lambda_06_ForeachLoop();
         new With_Lambda_07_CreatingThread();
         new With_Lambda_08_Comparator();
+        new With_Lambda_09_FilterCollectionData();
     }
 }
