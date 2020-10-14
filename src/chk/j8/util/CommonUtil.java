@@ -1,17 +1,17 @@
-package chk.j8.lambda.util;
+package chk.j8.util;
 
-import chk.j8.lambda.lambda_exp.Employee;
+import chk.j8.lambda_exp.Employee;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-import java.util.regex.Pattern;
 
-public class CommonUtil {
+public interface  CommonUtil {
 
     public static final String singlePatternRegEx = "[a-zA-Z]";
 
-    public static List<Employee> getEmployeeList() {
+      static List<Employee> getEmployeeList() {
 
         List<Employee> listEmployee = new ArrayList<Employee>();
         listEmployee.add(new Employee("aaa", 10));
@@ -22,10 +22,16 @@ public class CommonUtil {
         return listEmployee;
     }
 
-    public static char getCharInput()
-    {
+    static List<Integer> getNumberList() {
+
+        List<Integer> integers = Arrays.asList(10, 1, 5, 50, 2, 100);
+
+        return integers;
+    }
+
+    public static char getCharInput() {
         Scanner scanner = new Scanner(System.in);
-        char ch  = scanner.next().charAt(0);
+        char ch = scanner.next().charAt(0);
         return ch;
     }
 }

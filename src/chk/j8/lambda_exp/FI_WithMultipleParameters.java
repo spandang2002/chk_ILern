@@ -1,4 +1,4 @@
-package chk.j8.lambda.lambda_exp;
+package chk.j8.lambda_exp;
 
 @FunctionalInterface
 public interface FI_WithMultipleParameters {

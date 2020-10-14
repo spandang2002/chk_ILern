@@ -1,4 +1,4 @@
-package chk.j8.lambda.lambda_exp;
+package chk.j8.lambda_exp;
 
 import java.util.Comparator;
 

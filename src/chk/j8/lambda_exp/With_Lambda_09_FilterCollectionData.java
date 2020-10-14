@@ -1,9 +1,9 @@
-package chk.j8.lambda.lambda_exp;
+package chk.j8.lambda_exp;
+
+import chk.j8.util.CommonUtil;
 
 import java.util.List;
 import java.util.stream.Stream;
-
-import static chk.j8.lambda.util.CommonUtil.getEmployeeList;
 
 public class With_Lambda_09_FilterCollectionData {
 
@@ -17,7 +17,7 @@ public class With_Lambda_09_FilterCollectionData {
 
     private void filterUsingLambdaBasedOnSalary() {
 
-        listEmployee = getEmployeeList();
+        listEmployee = CommonUtil.getEmployeeList();
 
         /***
          * Filter the employee whose salary is less than 20.
